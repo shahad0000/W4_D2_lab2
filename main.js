@@ -49,3 +49,52 @@ console.log(heights.every((height) => height < 200));
 // Some
 console.log(eyeColors.some((eye) => eye === "blue"));
 console.log(heights.some((height) => height > 210));
+
+("=========LAB 3========");
+let students = ["Ali", "Sara", "Ahmed", "Lana", "Omar", "Noor"];
+
+let startsWithA = students.filter((name) => name.startsWith("A"));
+console.log(startsWithA);
+
+let moreThanFour = students.filter((name) => name.length > 4);
+console.log(moreThanFour);
+
+let capNames = students.map((name) => name.toUpperCase());
+console.log(capNames);
+
+let includesR = students.find((name) => name.toLowerCase().includes("r"));
+console.log(includesR);
+
+let sortedNames = students.sort();
+console.log(sortedNames);
+
+let findName = students.includes("Omar");
+console.log(findName);
+
+let strLen = students.reduce((acc, curr) => acc + curr.length, 0);
+
+let evenNameLen = students.filter((name) => name.length % 2 === 0);
+console.log(evenNameLen);
+
+let reversedNames = students.map((name) => name.split("").reverse().join(""));
+console.log(reversedNames);
+
+let withoutO = students.filter((name) => !name.toLowerCase().includes("o"));
+console.log(withoutO);
+
+let studentsGrades = [
+  ["Ali", [85, 90, 78]],
+  ["Sara", [88, 55, 33]],
+  ["Ahmed", [22, 11, 58]],
+  ["Lana", [25, 66, 35]],
+  ["Omar", [45, 94, 98]],
+  ["Noor", [15, 92, 73]],
+];
+
+let studentsAvg = studentsGrades.map((std) => {
+  return [std[0], std[1].reduce((acc, curr) => acc + curr, 0) / std[1].length];
+});
+console.log(studentsAvg);
+
+let greaterThan80 = studentsAvg.filter((std) => std[1] > 80);
+console.log(greaterThan80);
