@@ -19,6 +19,7 @@ console.log(heights);
 let masses = characters.map((character) => {
   return character[3];
 });
+
 let eyeColors = characters.map((character) => {
   return character[4];
 });
@@ -30,6 +31,7 @@ console.log(totalHeights);
 // filter
 let heightsLess200 = heights.filter((height) => height < 200);
 console.log(heightsLess200);
+
 let males = characters.filter((character) => character[2] === "male");
 console.log(males);
 
